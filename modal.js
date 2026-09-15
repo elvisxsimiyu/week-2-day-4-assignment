@@ -50,7 +50,7 @@ document.addEventListener("keydown" , function(event){
         modalOverlay.forEach(function(modal){
             if(modal.classList.contains("show")){
                 modal.style.display ="none";
-                modal.classList.remove = "show";
+                modal.classList.remove ("show");
                 document.body.style.overflow="auto";
             }
         })

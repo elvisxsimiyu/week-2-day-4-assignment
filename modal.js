@@ -40,5 +40,21 @@ modalOverlay.forEach(function(modal,i){
             document.body.style.overflow="auto";
         }
     })
+
+   
+
 })
+
+document.addEventListener("keydown" , function(event){
+    if(event.key === "Escape"){
+        modalOverlay.forEach(function(modal){
+            if(modal.classList.contains("show")){
+                modal.style.display ="none";
+                modal.classList.remove = "show";
+                document.body.style.overflow="auto";
+            }
+        })
+    }
+})
+
 

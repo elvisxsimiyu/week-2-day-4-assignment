@@ -13,10 +13,54 @@
     </head>
     <body>
 
+        <div class="container">
+
+            <div class="title-form">
+                <h1>REGISTRATION FORM</h1>
+            </div>
+            
+            <form action="/submit" method= "POST" class="form">
+
+                <div class="name-section">
+                    <label for="name">Full Name</label><br>
+                    <input type="text" id="name" class="name" name="name" placeholder="Enter your name" required>
+                    <div class="name-feedback"></div>
+                </div>
+
+                <br>
+
+                <div class="email-section">
+                    <label for="email">Email Address</label><br>
+                    <input type="email" id="email" class="email-input" name="email" placeholder="Enter your Email" required>
+                    <div class="email-feedback"></div>
+                </div>
+
+                <br>
+
+                <div class="phone-section">
+                    <label for="phone">Phone Number</label><br>
+                    <input type="tel" id="phone" class="phone-number" name="phone" placeholder="Enter your Phone number" required>
+                    <div class="phone-feedback"></div>
+                </div>
+
+                <br>
+
+                <div class="password-section">
+                    <label for="pass">Password</label><br>
+                    <input type="password" id="pass" class="pass-word" name="pass" placeholder="Enter your password" required>
+                    <div class="password-feedback"></div>
+                </div>
+                <br>
+
+                <button type="submit" class="submit-btn">Register</button>
+
+            </form>
+        </div>
 
 
 
-        
+
+
         <script src="form.js"></script>
     </body>
 </html>

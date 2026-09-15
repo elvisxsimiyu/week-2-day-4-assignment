@@ -57,7 +57,8 @@ body{
 .btn{
 
     border:none;
-    padding:10px;
+    padding:15px;
+    width: 300;
     border-radius: 12px;
     font-family: inherit;
     font-size:15px;
@@ -66,6 +67,7 @@ body{
     color:#000000;
     box-shadow: 0 4px 0 #bbbbbb;
     transition:background-color 0.3s;
+    font-size: 25px;
     
 }
 
@@ -95,6 +97,7 @@ body{
     background: rgba(0, 0, 0, 0.5);
     border-radius: 12px;
     padding:10px;
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
@@ -106,22 +109,30 @@ body{
 
     background-color: rgb(216, 213, 213) ;
     max-width: 500px;
+    height: 500px;
     padding:20px;
     border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .modal-heading{
 
+    
     font-weight: bold;
-    font-size: 25px;
+    font-size: 40px;
     margin-bottom:5px;
     
 }
 
 .modal-paragraph{
 
-    font-size:18px;
+    font-size:30px;
     margin-bottom: 5px;
+    
 }
 
 .btn.close{

@@ -20,6 +20,7 @@ body{
 }
 
 .container{
+
     display: flex;
     flex-direction: column;
     margin:auto;
@@ -40,16 +41,73 @@ body{
 }
 
 .form{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #ffffff;
     align-items: center;
-    margin-top: 50px;
-    height:600px;
-    width: 400px;
+    margin-top: 40px;
+    height:500px;
+    width: 350px;
+    padding:20px;
     border-radius: 12px;
 
-   
-    
+}
+
+.label{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.field{
+
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 25px;
+    width: 300px;
+    height: 35px;
+    outline: none;
+}
+
+.field.error{
+    border-color: red;
+    outline: red;
+}
+
+.field.valid{
+    border-color: green;
+}
+
+.submit-btn{
+
+    border: none;
+    padding: 15px;
+    background-color:rgb(216, 213, 213);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 25px;
+    font-weight:bold;
+    box-shadow: 0 4px 0 grey;
+    transition: background-color 0.3s;
+
+
+}
+
+.submit-btn:hover{
+
+    background-color: #000000;
+    color:#ffffff;
+}
+
+.submit-btn:active{
+
+    transform:translateY(4px);
+    box-shadow: 0 0 0 grey;
+
+}
+
+.feedback{
+    color:red;
+    font-size: 18px;
 }

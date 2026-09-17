@@ -23,7 +23,14 @@
 
                 <div class="name-section">
                     <label for="name" class="label">Full Name</label><br>
-                    <input type="text" id="name" class="field full-name" name="name" placeholder="Enter your name" required>
+
+                    <div class="input-wrapper">
+
+                        <input type="text" id="name" class="field full-name" name="name" placeholder="Enter your name" required>
+                        <span class="validation-icon name-icon"></span>
+
+                    </div>
+
                     <div class="feedback names"></div>
                 </div>
 
@@ -31,7 +38,14 @@
 
                 <div class="email-section">
                     <label for="email" class="label">Email Address</label><br>
-                    <input type="email" id="email" class="field ema-il" name="email" placeholder="Enter your Email" required>
+
+                    <div class="input-wrapper">
+
+                        <input type="email" id="email" class="field ema-il" name="email" placeholder="Enter your Email" required>
+                        <span class="validation-icon email-icon"></span>
+
+                    </div>
+
                     <div class="feedback email-address"></div>
                 </div>
 
@@ -39,7 +53,14 @@
 
                 <div class="phone-section" >
                     <label for="phone" class="label">Phone Number</label><br>
-                    <input type="tel" id="phone" class="field number" name="phone" placeholder="Enter your Phone number" required>
+
+                    <div class="input-wrapper">
+
+                        <input type="tel" id="phone" class="field number" name="phone" placeholder="Enter your Phone number" required>
+                        <span class="validation-icon phone-icon"></span>
+
+                    </div>
+
                     <div class="feedback phone-number"></div>
                 </div>
 
@@ -47,19 +68,22 @@
 
                 <div class="password-section">
                     <label for="pass" class="label">Password</label><br>
-                    <input type="password" id="pass" class="field pass-word" name="pass" placeholder="Enter your password" required>
+
+                    <div class="input-wrapper">
+
+                        <input type="password" id="pass" class="field pass-word" name="pass" placeholder="Enter your password" required>
+                        <span class="validation-icon password-icon"></span>
+
+                    </div>
+
                     <div class="feedback password-strength"></div>
                 </div>
                 <br>
 
-                <button type="submit" class="submit-btn">Register</button>
-
+                <button type="submit" class="submit-btn" disabled>Register</button>
+                <div class="form-feedback"></div>
             </form>
         </div>
-
-
-
-
 
         <script src="form.js"></script>
     </body>

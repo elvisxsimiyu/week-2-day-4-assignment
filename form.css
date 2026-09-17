@@ -48,7 +48,7 @@ body{
     background-color: #ffffff;
     align-items: center;
     margin-top: 40px;
-    height:500px;
+    height:550px;
     width: 350px;
     padding:20px;
     border-radius: 12px;
@@ -68,46 +68,78 @@ body{
     width: 300px;
     height: 35px;
     outline: none;
+    border: 2px solid black;
 }
 
 .field.error{
     border-color: red;
-    outline: red;
+    box-shadow: 0 0 8px red;
+    
 }
 
 .field.valid{
     border-color: green;
+    box-shadow: 0 0 8px green;
+    
 }
 
-.submit-btn{
+.input-wrapper{
+    position: relative;
+}
 
+.validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.validation-icon.valid{
+    color:green;
+}
+
+.validation-icon.error{
+    color:red;
+}
+
+.submit-btn {
     border: none;
     padding: 15px;
-    background-color:rgb(216, 213, 213);
+    background-color: rgb(216, 213, 213);
     border-radius: 12px;
     font-family: inherit;
     font-size: 25px;
-    font-weight:bold;
+    font-weight: bold;
     box-shadow: 0 4px 0 grey;
     transition: background-color 0.3s;
-
-
 }
 
-.submit-btn:hover{
-
+.submit-btn:not(:disabled):hover {
     background-color: #000000;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-.submit-btn:active{
-
-    transform:translateY(4px);
+.submit-btn:not(:disabled):active {
+    transform: translateY(4px);
     box-shadow: 0 0 0 grey;
+}
 
+.submit-btn:disabled {
+    background-color: #b5b5b5;
+    color: #777;
+    box-shadow: none;
+    cursor: not-allowed;
 }
 
 .feedback{
     color:red;
     font-size: 18px;
+}
+
+.form-feedback{
+    color: green;
+    font-weight: bold;
+    margin-top: auto;
 }

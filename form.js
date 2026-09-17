@@ -361,48 +361,40 @@ function updateSubmitButton(){
 // Validate the name every time the user types
 nameField.addEventListener("input" ,function(){
 
-    if(nameField.value.length >= 0){
+    nameValid = validateName();
+    updateSubmitButton();
 
-        nameValid = validateName();
-        updateSubmitButton();
-
-    }
+    
 });
 
 
 // Validate the email every time the user types
 emailField.addEventListener("input",function(){
 
-    if(emailField.value.length >= 0){
+    emailValid = validateEmail();
+    updateSubmitButton();
 
-        emailValid = validateEmail();
-        updateSubmitButton();
-
-    }
+    
 });
 
 
 // Validate the phone number every time the user types
 phoneField.addEventListener("input" , function(){
 
-    if(phoneField.value.length >= 0 ){
+    phoneValid = validatePhone();
+    updateSubmitButton();
 
-        phoneValid = validatePhone();
-        updateSubmitButton();
-
-    }
+    
 });
 
 
 // Validate the password every time the user types
 passwordField.addEventListener("input" , function(){
 
-    if(passwordField.value.length >=0 ){
+    passwordValid = validatePassword();
+    updateSubmitButton();
 
-        passwordValid = validatePassword();
-        updateSubmitButton();
-
-    }
+    
 });
 
 
@@ -473,7 +465,7 @@ form.addEventListener("submit" , function(event){
 
 
     // --------------------------------------------------------
-    // Clear validation states and icons
+    // Clear icons
     // --------------------------------------------------------
 
     nameIcon.classList.remove("valid");
@@ -491,5 +483,6 @@ form.addEventListener("submit" , function(event){
     passwordIcon.classList.remove("valid");
     passwordIcon.classList.remove("error");
     passwordIcon.textContent="";
+
 });
 

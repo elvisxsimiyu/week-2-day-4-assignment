@@ -338,3 +338,20 @@ week-2-day-4-assignment/
 ├── drag.css
 └── drag.js
 ```
+
+## AI Usage
+
+AI assistance was used throughout this assignment as a learning and debugging aid.
+
+AI was primarily used to:
+
+- Explain JavaScript concepts and unfamiliar code.
+- Help break down event-handling logic into smaller steps.
+- Clarify errors and explain why certain approaches worked or did not work.
+- Review and explain code after implementation.
+- Assist with documentation and README writing.
+- Provide guidance when working with unfamiliar concepts such as drag-and-drop events, `getBoundingClientRect()`, `reduce()`, and validation state management.
+
+Some implementation code was also generated or adapted with AI assistance. The code was then tested, modified, and reviewed to understand how it worked.
+
+The purpose of using AI was to support the learning process rather than replace testing and experimentation. All functionality was implemented and tested in the browser, and the final code was reviewed to ensure that it met the assignment requirements.

@@ -9,5 +9,68 @@
 body{
 
     font-family: 'Sofia Sans Extra Condensed' , sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 45px;
+}
+
+.page-title p {
+    font-size: 25px;
+}
+
+.container {
+    width: 500px;
+}
+
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgb(216, 213, 213);
+    border-radius: 12px;
+    font-size: 25px;
+    cursor: grab;
+    box-shadow: 0 4px 0 #bbbbbb;
+}
+
+.task:active {
+    cursor: grabbing;
+}
+
+.task.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: rgb(230, 228, 228);
+}
+
+.task.drop-target {
+    border-top: 3px solid red;
     
+}
+
+
+.priority {
+    font-weight: bold;
 }

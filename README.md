@@ -239,3 +239,102 @@ task-2/
 ## Goal
 
 The goal of this task was to practice creating responsive, user-friendly form validation while separating individual validation responsibilities from the overall submit-button state.
+
+# Task 3 — Drag and Drop Priority List
+
+A reorderable priority list built using HTML, CSS, and JavaScript. Users can drag tasks into different positions, with priority numbers updating automatically after each reorder.
+
+## Features
+
+- Five tasks displayed in a priority list
+- Tasks are draggable using the HTML Drag and Drop API
+- Tasks can be reordered by dragging and dropping
+- Priority numbers update automatically after reordering
+- Dragged task becomes semi-transparent while being moved
+- Drop indicator shows where the dragged task will be placed
+- The dragged task and drop indicator are cleaned up after the drag ends
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- HTML Drag and Drop API
+
+## How It Works
+
+### 1. Tracking the Dragged Task
+
+When a task starts being dragged, it is stored in `taskTrack` and given the `.dragging` class.
+
+The `.dragging` class provides visual feedback by making the task semi-transparent and slightly enlarging it.
+
+### 2. Finding the Drop Position
+
+The `getDragAfterElement()` function determines which task the dragged item should be placed before.
+
+It uses:
+- `getBoundingClientRect()` to determine each task's position
+- `event.clientY` to determine the mouse's vertical position
+- The distance between the mouse and the center of each task
+- `reduce()` to find the closest suitable task
+
+The dragged task itself is excluded from the calculation.
+
+### 3. Reordering the List
+
+The `dragover` event continuously checks the mouse position while the task is being dragged.
+
+Depending on the result of `getDragAfterElement()`:
+- If there is no task below the cursor, the dragged task is moved to the end of the list.
+- Otherwise, the dragged task is inserted before the identified task using `insertBefore()`.
+
+### 4. Updating Priorities
+
+After the task is dropped, `updatePriorities()` gets the tasks in their current DOM order.
+
+Each task's `.priority` element is then updated using its index:
+
+```js
+index + 1
+```
+
+This converts JavaScript's zero-based index into the priority numbers displayed to the user.
+
+### 5. Visual Feedback
+
+Two CSS classes are used to provide feedback during dragging:
+- `.dragging` — makes the dragged task semi-transparent and visually lifted.
+- `.drop-target` — adds a line above the task where the dragged item will be placed.
+
+## Key JavaScript Concepts Practiced
+
+- `dragstart`
+- `dragover`
+- `drop`
+- `dragend`
+- `preventDefault()`
+- DOM element selection
+- `querySelector()` and `querySelectorAll()`
+- `classList`
+- `insertBefore()`
+- `appendChild()`
+- `getBoundingClientRect()`
+- `reduce()`
+- NodeLists and DOM order
+- Functions with single responsibilities
+- Event-driven programming
+
+## Expected Result
+
+The page displays a list of five tasks. A task can be dragged to a different position, with visual feedback showing the task being dragged and its intended drop position. After dropping, the priority numbers automatically update to reflect the new order.
+
+## Project Structure
+
+```text
+week-2-day-4-assignment/
+│
+├── drag.html
+├── drag.css
+└── drag.js
+```
